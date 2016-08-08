@@ -71,7 +71,7 @@
              <span class="icon-bar"></span>
            </button>
            <a class="navbar-brand page-scroll" href="<?php echo get_site_url() ?>">
-            <img class="hvr-grow" style="max-width:120px;" src="<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra" height="60px">
+            <img class="hvr-grow" style="max-width:120px;height:60px;" src="<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
           </a>
         </div>
 
@@ -89,7 +89,7 @@
             echo '<a href="'.wp_logout_url( get_permalink() ).'"><button type="button" class="btn btn-menu-contact navbar-btn">Logout</button></a>';
           } else {
             echo '<a href="'.wp_login_url( $redirect ).'"><button type="button" class="btn btn-menu-contact navbar-btn">Login</button></a>';
-            echo '<a href="'.wp_registration_url( $redirect ).'"><button type="button" class="btn btn-menu-contact navbar-btn">Register</button></a>';
+            echo '<a href="'.get_site_url().'/register"><button type="button" class="btn btn-menu-contact navbar-btn">Register</button></a>';
           }
           ?>
         </ul>

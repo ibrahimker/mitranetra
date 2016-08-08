@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Register Next Step Template */
+/* Template Name: Register Template */
 get_header();
 ?>
 <!-- About Section -->
@@ -8,7 +8,7 @@ get_header();
         <div class="col-md-1">
         </div>
         <div class="col-md-10">
-            <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
+            <?php echo do_shortcode('[gravityform id="3" title="false" description="false" ajax="true"]'); ?>
         </div>
         <div class="col-md-1">
         </div>  

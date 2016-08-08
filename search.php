@@ -24,26 +24,26 @@ get_header();
 			</div>
 			<div class="row">
 				<form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline">
-					<fieldset>
-						<div class="input-group" style="display:flex;">
-							<label class="sr-only" for="search">Form Pencarian Buku</label>
-							<input type="text" name="s" id="search" placeholder="Saya ingin mencari buku..." value="<?php the_search_query(); ?>" class="form-control"/>
-							<input type="hidden" name="post_type" value="sdm_downloads"  />
-							<label class="sr-only" for="searchsubmit">Search</label>
-							<input type="submit" class="btn btn-primary" id="searchsubmit" value="Cari" />                 
-						</div>
-
-					</fieldset>
-				</form>
-				<br>
-			</div>
-			<?php if (have_posts()) : ?>
-				<?php
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				?>
-				<?php $counter=0; ?>
-				<?php while (have_posts()) : the_post(); ?>
-					<!-- blog post -->
+                    <fieldset>
+                        <legend class="sr-only">Search Box Pencarian Buku:</legend>
+                        <div class="input-group" style="display:flex;">
+                            <label class="sr-only" for="search">Search Box Pencarian Buku</label>
+                            <input type="text" name="s" id="search" placeholder="Aku ingin membaca" value="<?php the_search_query(); ?>" class="form-control"/>
+                            <input type="hidden" name="post_type" value="sdm_downloads"  />
+                            <label class="sr-only" for="searchsubmit">Search</label>
+                            <input type="submit" class="btn btn-primary" id="searchsubmit" value="Cari" />                 
+                        </div>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+            <?php if (have_posts()) : ?>
+                <?php
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                ?>
+                <?php $counter=0; ?>
+                <?php while (have_posts()) : the_post(); ?>
+                   <!-- blog post -->
 <!--                         <div class="row">
                             <div class="col-md-6">
                                 <a class="head-post" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

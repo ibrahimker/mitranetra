@@ -184,6 +184,65 @@ function addUploadMimes($mimes) {
 
 add_filter('upload_mimes', 'addUploadMimes');
 
+add_action( 'show_user_profile', 'add_other_user_info' );
+add_action( 'edit_user_profile', 'add_other_user_info' );
+
+function add_other_user_info( $user )
+{
+    ?>
+        <h3>Informasi Lainnya</h3>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="nomor_handphone">Nomor Handphone</label></th>
+                <td><input type="text" name="nomor_handphone" value="<?php echo esc_attr(get_the_author_meta( 'nomor_handphone', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="jenis">Jenis Tuna Netra</label></th>
+                <td><input type="text" name="jenis" value="<?php echo esc_attr(get_the_author_meta( 'jenis', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="jenis_kelamin">Jenis Kelamin</label></th>
+                <td><input type="text" name="jenis_kelamin" value="<?php echo esc_attr(get_the_author_meta( 'jenis_kelamin', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="tanggal_lahir">Tanggal Lahir</label></th>
+                <td><input type="text" name="tanggal_lahir" value="<?php echo esc_attr(get_the_author_meta( 'tanggal_lahir', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+
+            <tr>
+                <th><label for="alamat">Alamat</label></th>
+                <td><input type="text" name="alamat" value="<?php echo esc_attr(get_the_author_meta( 'alamat', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+        </table>
+    <?php
+}
+
+add_action( 'personal_options_update', 'save_user_info' );
+add_action( 'edit_user_profile_update', 'save_user_info' );
+
+function save_user_info( $user_id )
+{
+    update_user_meta( $user_id,'nomor_handphone', sanitize_text_field( $_POST['nomor_handphone'] ) );
+    update_user_meta( $user_id,'jenis', sanitize_text_field( $_POST['jenis'] ) );
+    update_user_meta( $user_id,'jenis_kelamin', sanitize_text_field( $_POST['jenis_kelamin'] ) );
+    update_user_meta( $user_id,'alamat', sanitize_text_field( $_POST['alamat'] ) );
+    update_user_meta( $user_id,'tanggal_lahir', sanitize_text_field( $_POST['tanggal_lahir'] ) );
+}
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/site-login-logo.png);
+            padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -224,16 +283,3 @@ require get_template_directory() . '/inc/breadcrumb.php';
  */
 require get_template_directory() . '/inc/gravityform.php';
 require get_template_directory() . '/inc/gravityform2.php';
-
-
-// Added custom validation for minimum characters count
-add_filter("gform_field_validation_1_6", "validate_chars_count", 10, 4);
-add_filter("gform_field_validation_2_6", "validate_chars_count", 10, 4);
-add_filter("gform_field_validation_3_6", "validate_chars_count", 10, 4);
-function validate_chars_count($result, $value, $form, $field){
-if (strlen($value) < 140) { //Minimum number of characters
-	$result["is_valid"] = false;
-	$result["message"] = "You just type only ".strlen($value)." characters. Please enter at least 140 characters.";
-}
-return $result;
-}
