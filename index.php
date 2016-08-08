@@ -46,8 +46,11 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <center><h1>Tentang Kami</h1></center>
-                        <p>Open Content (OCT) adalah bagian dari Indonesia Open Education Resources yang menyediakan layanan akses berbagai materi pendidikan secara gratis dan terbuka. Anda dapat melakukan pencarian di kotak pencarian yang tersedia dan mengunduh materi yang anda inginkan. Selain dapat mengunduh, anda juga dapat mengunggah materi anda ke dalam sistem dan membagikan materi anda ke pengguna lainnya.</p>
+                        <center><h1 style="padding: 50px 0px;font-size: 2.618em;text-transform: none;">Membaca Buku, Membaca Dunia</h1></center>
+                        <p>Pustaka digital mitra netra adalah sebuah perpustakaan yang menyediakan berbagai koleksi buku audio untuk dinikmati tuna netra. Kami percaya kalau buku adalah jendela dunia, oleh karena itu kami menyediakan sarana mendapatkan buku audio yang nyaman digunakan.</p>
+                        <div class="row" style="padding:30px;">
+                            <center><a href="<?php echo get_site_url() ?>/pustaka-digital" class="btn btn-badr">Mulai Membaca</a></center>
+                        </div>
                     </div>
                     <div class="col-md-1"></div>
                 </div>

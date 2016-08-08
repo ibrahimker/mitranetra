@@ -430,7 +430,7 @@ header .intro-image{
 
 @media(min-width:768px) {
     header .intro-lead-in {
-        padding-top:10%;
+        padding-top:15%;
         margin-bottom: 25px;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         text-align:center;
@@ -474,7 +474,7 @@ header .intro-image{
     background: #444758 url(https://media005.flaticon.com/flaticon/img/pattern-search.png);
     background-position: center bottom;
     background-repeat: repeat;
-    height: 400px;
+    height: 480px;
 }
 #home2 {
     text-align: center;
@@ -2041,5 +2041,4 @@ textarea{
 .btn-search{
     border-radius:0px;
     border:none;
-    background-color:red;
 }
