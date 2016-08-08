@@ -430,17 +430,19 @@ header .intro-image{
 
 @media(min-width:768px) {
     header .intro-lead-in {
-        padding-top:30%;
+        padding-top:10%;
         margin-bottom: 25px;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        text-align:left;
+        text-align:center;
+        text-transform: none;
         font-size: 36px;
         font-weight: 700;
     }
 
     header .intro-heading {
         margin-bottom: 20px;
-        text-align: left;
+        text-transform: none;
+        text-align: center;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 18px;
         font-weight:300;
@@ -469,15 +471,10 @@ header .intro-image{
     text-align: center;
     color: #fff;
     background-attachment: fixed !important;
-    background-image: url(../img/header/mitranetra.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    height:inherit;
-    height:768px;
+    background: #444758 url(https://media005.flaticon.com/flaticon/img/pattern-search.png);
+    background-position: center bottom;
+    background-repeat: repeat;
+    height: 400px;
 }
 #home2 {
     text-align: center;
@@ -2040,4 +2037,9 @@ textarea{
 }
 .avatar img{
     padding:0px;
+}
+.btn-search{
+    border-radius:0px;
+    border:none;
+    background-color:red;
 }
