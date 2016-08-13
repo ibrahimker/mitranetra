@@ -61,7 +61,12 @@ get_header(); ?>
 									$cpt_is_password = !empty($get_cpt_object->post_password) ? 'yes' : 'no';
 									$homepage = get_bloginfo('url');
 									$download_url = $homepage . '/?smd_process_download=1&download_id=' . $id;
-									$download_button_code = '<a href="' . $download_url . '" class="btn btn-book-download" title="'.$isset_item_title.'">Download Now</a>';
+									if(is_user_logged_in()){
+										$download_button_code = '<a href="' . $download_url . '" class="btn btn-book-download" title="'.$isset_item_title.'">Download Now</a>';
+									}
+									else{
+										$download_button_code = '<div class="alert alert-danger">Anda harus login terlebih dahulu untuk dapat mengunduh buku ini</div>';
+									}
 									if ($cpt_is_password !== 'no') {
 										$download_button_code = sdm_get_password_entry_form($id);
 									}

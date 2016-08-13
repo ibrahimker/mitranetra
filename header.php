@@ -71,7 +71,7 @@
              <span class="icon-bar"></span>
            </button>
            <a class="navbar-brand page-scroll" href="<?php echo get_site_url() ?>">
-            <img class="hvr-grow" style="max-width:120px;height:60px;" src="<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
+            <img class="hvr-grow" style="max-width:150px;height:60px;" src="<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
           </a>
         </div>
 

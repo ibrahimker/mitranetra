@@ -334,7 +334,8 @@ body {
 
 /*edited in here*/
 .navbar-mid{
-    margin-left:6%;
+    margin-left:10%;
+    font-size:15px;
 }
 .btn-badr {
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -415,7 +416,7 @@ header .intro-lead-in {
     margin-bottom: 25px;
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 header .intro-heading {
@@ -439,7 +440,7 @@ header .intro-image{
         text-align:center;
         text-transform: none;
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     header .intro-heading {
@@ -474,10 +475,12 @@ header .intro-image{
     text-align: center;
     color: #fff;
     background-attachment: fixed !important;
-    background: #444758 url(https://media005.flaticon.com/flaticon/img/pattern-search.png);
+    background-image:linear-gradient(to bottom, rgba(51, 94, 195, 0.55), rgba(51, 94, 195, 0.55)), url("../img/header/photo2.jpg");
+    /*background: linear-gradient(#eb01a5, #d13531), url('../img/header/photo2.jpg');*/
     background-position: center bottom;
-    background-repeat: repeat;
-    height: 480px;
+    background-size:cover;
+    /*background-repeat: repeat;*/
+    min-height: 480px;
 }
 #home2 {
     text-align: center;

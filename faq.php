@@ -5,7 +5,7 @@
 get_header();
 
 ?>
-<section id="contact-footer">
+<section id="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-1"></div>

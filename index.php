@@ -35,7 +35,7 @@ get_header(); ?>
                                 </div>
                             </fieldset>
                         </form>
-                        <h6>12.438 KOLEKSI | 26 PENERBIT | 1.024 PENGARANG | 2.312 UNDUH </h6>
+                        <h6><?php echo wp_count_posts('sdm_downloads')->publish; ?> KOLEKSI | 3 PENERBIT | 17 PENGARANG | 2 UNDUH </h6>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -46,8 +46,8 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <center><h1 style="padding: 50px 0px;font-size: 2.618em;text-transform: none;">Membaca Buku, Membaca Dunia</h1></center>
-                        <p>Pustaka digital mitra netra adalah sebuah perpustakaan yang menyediakan berbagai koleksi buku audio untuk dinikmati tuna netra. Kami percaya kalau buku adalah jendela dunia, oleh karena itu kami menyediakan sarana mendapatkan buku audio yang nyaman digunakan.</p>
+                        <center><h1 style="padding: 50px 0px 30px 0px;font-size: 2em;text-transform: none;font-weight:400;">Membaca Buku, Membaca Dunia</h1></center>
+                        <p style="font-size:16px;font-family: 'Hind', sans-serif;">Pustaka digital mitra netra adalah sebuah perpustakaan yang menyediakan berbagai koleksi buku audio untuk dinikmati tuna netra. Kami percaya kalau buku adalah jendela dunia, oleh karena itu kami menyediakan sarana mendapatkan buku audio yang nyaman digunakan.</p>
                         <div class="row" style="padding:30px;">
                             <center><a href="<?php echo get_site_url() ?>/pustaka-digital" class="btn btn-badr">Mulai Membaca</a></center>
                         </div>
