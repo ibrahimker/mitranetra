@@ -3,7 +3,7 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
- /* Biru Badr = #00B4FF*/
+ /* Biru Badr = #335e9f*/
  body {
     padding-top: 50px;
     overflow-x: hidden;
@@ -15,7 +15,7 @@
 }
 
 .text-primary {
-    color: #00B4FF;
+    color: #335e9f;
 }
 
 p {
@@ -27,7 +27,7 @@ p.large {
     font-size: 16px;
 }
 .current-menu-item a{
-    color:#00B4FF !important;
+    color:#335e9f !important;
     outline: 0;
     text-decoration: none;
 }
@@ -41,14 +41,14 @@ a.active {
 }
 
 a {
-    color: #00B4FF;
+    color: #335e9f;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #00B4FF;
+    color: #335e9f;
 }
 
 h1,
@@ -75,12 +75,12 @@ h6 {
 }
 
 .btn-primary {
-    border-color: #00B4FF;
+    border-color: #335e9f;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #00B4FF;
+    background-color: #335e9f;
 }
 
 .btn-primary:hover,
@@ -90,7 +90,7 @@ h6 {
 .open .dropdown-toggle.btn-primary {
     border-color: #f6bf01;
     color: #fff;
-    background-color: #00B4FF;
+    background-color: #335e9f;
 }
 
 .btn-primary:active,
@@ -114,25 +114,25 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #00B4FF;
-    background-color: #00B4FF;
+    border-color: #335e9f;
+    background-color: #335e9f;
 }
 
 .btn-primary .badge {
-    color: #00B4FF;
+    color: #335e9f;
     background-color: #fff;
 }
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #00B4FF;
+    border-color: #335e9f;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #00B4FF;
+    background-color: #335e9f;
 }
 
 .btn-xl:hover,
@@ -142,7 +142,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     border-color: #f6bf01;
     color: #fff;
-    background-color: #00B4FF;
+    background-color: #335e9f;
 }
 
 .btn-xl:active,
@@ -166,25 +166,26 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-    border-color: #00B4FF;
-    background-color: #00B4FF;
+    border-color: #335e9f;
+    background-color: #335e9f;
 }
 
 .btn-xl .badge {
-    color: #00B4FF;
+    color: #335e9f;
     background-color: #fff;
 }
 
 .navbar-default {
     border-color: transparent;
     padding: 25px 0;
-    background-color: #000;
+    background-color: #fff;
     margin:0px;
+    border-bottom:1px solid #dddddd
 }
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #00B4FF;
+    color: #335e9f;
     padding:0px;
 }
 
@@ -192,7 +193,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #00B4FF;
+    color: #335e9f;
 }
 
 .navbar-default .navbar-collapse {
@@ -200,8 +201,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #00B4FF;
-    background-color: #00B4FF;
+    border-color: #335e9f;
+    background-color: #335e9f;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -210,7 +211,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #00B4FF;
+    background-color: #335e9f;
 }
 
 .navbar-default .nav li a {
@@ -219,28 +220,28 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #000;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #00B4FF;
+    color: #335e9f;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
-    color: #fff;
-    background-color: #00B4FF;
+    color: #000;
+    background-color: #335e9f;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #00B4FF;
+    color: #000;
+    background-color: #335e9f;
 }
 .navbar-btn{
-    margin:0px;
+    margin:4px 10px 0px 10px;
 }
 
 @media(min-width:768px) {
@@ -249,10 +250,11 @@ fieldset[disabled] .btn-xl.active {
         margin:0px;
         border: none;
         border-radius: 0px;
-        background-color: #000;
+        background-color: #fff;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
+        border-bottom:1px solid #dddddd
     }
 
     .navbar-default .navbar-brand {
@@ -267,8 +269,9 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #000000;
+        padding: 15px 0;
+        background-color: #fff;
+        border-bottom:1px solid #dddddd
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -309,12 +312,12 @@ section h3.section-subheading {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #00B4FF;
+    background: #335e9f;
 }
 
 ::selection {
     text-shadow: none;
-    background: #00B4FF;
+    background: #335e9f;
 }
 
 img::selection {
@@ -326,12 +329,12 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #00B4FF;
+    webkit-tap-highlight-color: #335e9f;
 }
 
 /*edited in here*/
 .navbar-mid{
-    margin-left:10%;
+    margin-left:6%;
 }
 .btn-badr {
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -339,9 +342,9 @@ body {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 10px 20px 10px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 
@@ -351,9 +354,9 @@ body {
     -moz-border-radius: 30;
     border-radius: 30px;
     padding: 10px 20px 10px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .subscribe-btn{
@@ -362,9 +365,9 @@ body {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 5px 30px 5px 30px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 .subscribe-btn:hover{
@@ -373,9 +376,9 @@ body {
     -moz-border-radius: 30;
     border-radius: 30px;
     padding: 5px 30px 5px 30px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 /*Halaman 404*/
@@ -723,11 +726,11 @@ header .intro-image{
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 7px 35px;
     font-size:14px;
     text-transform: uppercase;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
     margin:0px 30px 0px 0px;
 }
@@ -740,9 +743,9 @@ header .intro-image{
     padding: 7px 35px;
     font-size:14px;
     text-transform: uppercase;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
     margin:0px 30px 0px 0px;
 }
@@ -851,11 +854,11 @@ section#works{
 /*untuk halaman about*/
 /*header section*/
 #about p{
-    color:#fff;
+    color:#000;
     text-align: justify;
 }
 #about h1{
-    color:#fff;
+    color:#000;
     text-align: center;
 }
 #about img{
@@ -865,7 +868,7 @@ section#works{
 
 #about-header {
     text-align: center;
-    color: #fff;
+    color: #000;
     background-attachment: fixed;
     background-image: url(../img/header/about.jpg);
     background-position: center center;
@@ -900,7 +903,7 @@ section#works{
 }
 
 section#about{
-    background-color:#000000;
+    background-color:#fff;
     padding:80px 0px;
 }
 .about-tabs > li, .nav-pills > li {
@@ -930,13 +933,13 @@ section#about{
 .about-tabs>li.active>a, .about-tabs>li.active>a:focus, .about-tabs>li.active>a:hover {
     border:none;
     background-color: transparent;
-    color:#00B4FF;
+    color:#335e9f;
 }
 
 .about-tabs>li>a:focus, .about-tabs>li>a:hover {
     border:none;
     background-color: transparent;
-    color:#00B4FF;
+    color:#335e9f;
 }
 .tab-content{
     padding:30px;
@@ -964,7 +967,7 @@ section#about{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    
 }
 #comp-people-bates{
-    border-color:#00B4FF;
+    border-color:#335e9f;
 }
 .comp-people-desc{
     color:#ffffff;
@@ -1104,7 +1107,7 @@ section#about{
     font-size:14px;
 }
 #careers-jobs i, #careers-faq i{
-    color:#00B4FF;
+    color:#335e9f;
     font-size:24px;
 }
 .modal-content{
@@ -1279,7 +1282,7 @@ section#about{
     font-size: 18px;
 }
 .sidebar-bates{
-    border-color:#00B4FF;
+    border-color:#335e9f;
     margin:0;
 }
 .popular-list{
@@ -1362,14 +1365,14 @@ section#about{
 }
 /*Untuk halaman contact*/
 #contact-footer h1,#contact-footer h2,#contact-footer p{
-    color:#fff;
+    color:#000;
 }
 #contact-footer h2{
     font-size:1.618em;
 }
 #contact-header {
     text-align: center;
-    color: #fff;
+    color: #000;
     background-attachment: scroll;
     background-image: url(../img/header/contact.jpg);
     background-position: center center;
@@ -1381,9 +1384,9 @@ section#about{
 }
 #quotation-header {
     text-align: center;
-    color: #fff;
+    color: #000;
     background-attachment: scroll;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -1471,7 +1474,7 @@ section#about{
 .other-question{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:20px;
-    color:#00B4FF;
+    color:#335e9f;
     text-align: justify !important;   
 }
 /*setting halaman contact quotation*/
@@ -1501,7 +1504,7 @@ section#about{
     padding: 7px 35px;
     border: solid #101010 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#101010;
     margin:0px 30px 0px 0px;
 }
@@ -1541,10 +1544,10 @@ section#about{
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     font-size:14px;
     padding: 7px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
     margin:0px 30px 0px 0px;
 }
@@ -1556,14 +1559,14 @@ section#about{
     border-radius: 30px;
     padding: 7px 35px;
     font-size:14px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#FFFFFF;
     margin:0px 30px 0px 0px;
 }
 .other-question .ginput_container input, .other-quotation .ginput_container textarea{
-    color:#00B4FF;
+    color:#335e9f;
     background-color:transparent;
     border:none;
     animation: blink-other 1s infinite;
@@ -1572,7 +1575,7 @@ section#about{
     font-size:20px !important;
 }
 @keyframes blink-other {
-  50% {border-left: 1px solid #00B4FF;}
+  50% {border-left: 1px solid #335e9f;}
 }
 .other-question .ginput_container input:focus, .other-question .ginput_container textarea:focus{
     animation: none;
@@ -1612,7 +1615,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background: #00B4FF;
+    background: #335e9f;
     margin-top: -8px;
 }
 input[type=range]:focus {
@@ -1634,7 +1637,7 @@ input[type=range]::-moz-range-thumb {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background: #00B4FF;
+    background: #335e9f;
 }
 
 /*hide the outline behind the border*/
@@ -1670,7 +1673,7 @@ input[type=range]::-ms-thumb {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background: #00B4FF;
+    background: #335e9f;
 }
 input[type=range]:focus::-ms-fill-lower {
     background: #222;
@@ -1758,7 +1761,7 @@ input[type=range]:focus::-ms-fill-upper {
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background: #00B4FF;
+    background: #335e9f;
 }
 .contact-quotation input[type=range]:focus::-ms-fill-lower {
     background: #009ADA;
@@ -1787,12 +1790,12 @@ input[type=range]:focus::-ms-fill-upper {
     border:none !important;
     background-color:transparent !important;
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color:#00B4FF !important;
+    color:#335e9f !important;
     font-size:18px;
     padding-top:20px;
 }
 .minimal-light .esg-navigationbutton *, .flat-dark .esg-navigationbutton *{
-    color:#00B4FF !important;
+    color:#335e9f !important;
 }
 .esg-sorting-select{
     color:black;
@@ -1836,10 +1839,10 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     margin-top: 4px;
     padding: 4px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 
@@ -1850,9 +1853,53 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-top:4px;
     padding: 4px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
+    color:#ffffff;
+}
+.btn-menu-login {
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color:transparent;
+    color: #335e9f;
+    margin-top: 4px;
+    padding: 4px 20px;
+    border: solid #335e9f 3px;
+    text-decoration: none;
+}
+
+.btn-menu-login:hover {
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top:4px;
+    padding: 4px 20px;
+    border: solid #335e9f 3px;
+    text-decoration: none;
+    background-color:#335e9f;
+    color:#ffffff;
+}
+.btn-menu-register {
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color:transparent;
+    color: #335e9f;
+    margin-top: 4px;
+    padding: 4px 20px;
+    border: solid #335e9f 3px;
+    text-decoration: none;
+}
+
+.btn-menu-register:hover {
+    font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top:4px;
+    padding: 4px 20px;
+    border: solid #335e9f 3px;
+    text-decoration: none;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .btn-home-works {
@@ -1861,10 +1908,10 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     margin-top: 4px;
     padding: 8px 44px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 .btn-home-works:hover {
@@ -1874,9 +1921,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-top:4px;
     padding: 8px 44px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .btn-footer-others {
@@ -1910,9 +1957,9 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 
@@ -1922,9 +1969,9 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .btn-contact-works {
@@ -1934,9 +1981,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-left:20px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 
@@ -1947,9 +1994,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-left:20px;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .btn-contact-quotation{
@@ -1959,9 +2006,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-left:20px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 .btn-contact-quotation:hover{
@@ -1971,9 +2018,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-left:20px;
     padding: 8px 35px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .btn-blog-continue {
@@ -1983,9 +2030,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-bottom: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     padding: 6px 44px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 .btn-blog-continue:hover{
@@ -1995,9 +2042,9 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 30px;
     margin-bottom: 30px;
     padding: 6px 44px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;    
 }
 .btn-book-download {
@@ -2006,11 +2053,11 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     background-color:transparent;
-    color: #00B4FF;
+    color: #335e9f;
     margin: 20px 0px;
     width:100%;
     padding: 4px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
 }
 
@@ -2020,9 +2067,9 @@ input[type=range]:focus::-ms-fill-upper {
     -moz-border-radius: 30;
     border-radius: 30px;
     padding: 4px 20px;
-    border: solid #00B4FF 3px;
+    border: solid #335e9f 3px;
     text-decoration: none;
-    background-color:#00B4FF;
+    background-color:#335e9f;
     color:#ffffff;
 }
 .bates-footer{

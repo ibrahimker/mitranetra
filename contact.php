@@ -5,12 +5,12 @@
 get_header();
 
 ?>
-<section id="contact-footer">
+<section id="contact">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<h1 class="head-blog">Hubungi Kami</h1>
+				<h1>Hubungi Kami</h1>
 			</div>
 			<div class="col-md-1"></div>
 		</div>

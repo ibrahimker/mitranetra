@@ -235,13 +235,37 @@ function save_user_info( $user_id )
 
 function my_login_logo() { ?>
     <style type="text/css">
-        #login h1 a, .login h1 
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/site-login-logo.png);
-            padding-bottom: 30px;
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png);
+            height:60px;
         }
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
+function wpse127636_register_url($link){
+    /*
+        Change wp registration url
+    */
+    return str_replace(site_url('wp-login.php?action=register', 'login'),site_url('register', 'login'),$link);
+}
+add_filter('register','wpse127636_register_url');
+
+function wpse127636_fix_register_urls($url, $path, $orig_scheme){
+    /*
+        Site URL hack to overwrite register url     
+        http://en.bainternet.info/2012/wordpress-easy-login-url-with-no-htaccess
+    */
+    if ($orig_scheme !== 'login')
+        return $url;
+
+    if ($path == 'wp-login.php?action=register')
+        return site_url('register', 'login');
+
+    return $url;
+}
+add_filter('site_url', 'wpse127636_fix_register_urls', 10, 3);
 
 /**
  * Implement the Custom Header feature.

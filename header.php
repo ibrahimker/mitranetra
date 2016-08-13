@@ -86,10 +86,10 @@
          <ul class="nav navbar-nav navbar-right">
           <?php
           if ( is_user_logged_in() ) {
-            echo '<a href="'.wp_logout_url( get_permalink() ).'"><button type="button" class="btn btn-menu-contact navbar-btn">Logout</button></a>';
+            echo '<a href="'.wp_logout_url( get_permalink() ).'"><button type="button" class="btn btn-menu-login navbar-btn">Logout</button></a>';
           } else {
-            echo '<a href="'.wp_login_url( $redirect ).'"><button type="button" class="btn btn-menu-contact navbar-btn">Login</button></a>';
-            echo '<a href="'.get_site_url().'/register"><button type="button" class="btn btn-menu-contact navbar-btn">Register</button></a>';
+            echo '<a href="'.wp_login_url( $redirect ).'"><button type="button" class="btn btn-menu-login navbar-btn">Login</button></a>';
+            echo '<a href="'.get_site_url().'/register"><button type="button" class="btn btn-menu-register navbar-btn">Register</button></a>';
           }
           ?>
         </ul>
