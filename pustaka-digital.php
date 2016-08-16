@@ -43,7 +43,7 @@ get_header();
                             </div>
                         </div> -->
                         <?php if($counter==0) : ?>
-                            <div class="row">
+                            <div class="row" style="padding:30px 0px;">
                                 <div class="col-md-4 post">
                                     <div class="row">
                                         <?php
