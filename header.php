@@ -19,8 +19,6 @@
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
   <!-- Bootstrap Core CSS -->
   <link href="<?php echo bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
-  <!-- fullpage -->
-  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/css/jquery.fullPage.css" />
   <!-- Custom CSS -->
   <link href="<?php echo bloginfo('template_directory'); ?>/css/agency.css" rel="stylesheet">
   <!-- hover -->
@@ -71,7 +69,7 @@
              <span class="icon-bar"></span>
            </button>
            <a class="navbar-brand page-scroll" href="<?php echo get_site_url() ?>">
-            <img class="hvr-grow" style="max-width:150px;height:60px;" src="<?php echo bloginfo('template_directory'); ?>/img/logo-teks.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
+            <img class="hvr-grow" style="max-width:175px;height:75px;margin-top:-10px;" src="<?php echo bloginfo('template_directory'); ?>/img/logo-teks.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
           </a>
         </div>
 

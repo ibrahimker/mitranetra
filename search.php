@@ -28,10 +28,12 @@ get_header();
                         <legend class="sr-only">Search Box Pencarian Buku:</legend>
                         <div class="input-group" style="display:flex;">
                             <label class="sr-only" for="search">Search Box Pencarian Buku</label>
-                            <input type="text" name="s" id="search" placeholder="Aku ingin membaca" value="<?php the_search_query(); ?>" class="form-control"/>
+                            <input type="text" name="s" id="search" placeholder="Aku ingin membaca" value="<?php the_search_query(); ?>" class="form-control" style="height:50px;"/>
                             <input type="hidden" name="post_type" value="sdm_downloads"  />
                             <label class="sr-only" for="searchsubmit">Search</label>
-                            <input type="submit" class="btn btn-primary" id="searchsubmit" value="Cari" />                 
+                            <button type="submit" class="btn btn-primary btn-search" id="searchcubmit">
+                                <span class='glyphicon glyphicon-search'></span>
+                            </button>
                         </div>
                     </fieldset>
                 </form>

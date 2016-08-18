@@ -13,20 +13,10 @@
 
 <footer>
     <div class="container">
-        <div class="row" style="padding-bottom:10px;">
-            <div class="col-md-4 col-xs-12 icon">
-                <a href="https://www.facebook.com/yayasanmitranetra">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_facebook_footer.png" alt="facebook mitra netra"/>
-                </a>
-            </div>
-            <div class="col-md-8 col-xs-12 footer-right">
-
-            </div>
-        </div>
         <hr class="bates-footer">
         <div class="row">
             <div class="col-md-12">
-             <p class="copywright">Copyright &copy2016 Mitra Netra. All rights reserved.</p>
+             <p class="copywright">Copyright &copy2016 Mitra Netra Inc. All rights reserved.</p>
              <p>&nbsp;</p>
          </div>
      </div>
