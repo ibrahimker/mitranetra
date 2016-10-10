@@ -14,13 +14,26 @@
 <footer>
     <div class="container">
         <div class="row" style="padding-bottom:10px;">
-            <div class="col-md-4 col-xs-12 icon">
+            <div class="col-md-12 col-xs-12 icon">
                 <a href="https://www.facebook.com/yayasanmitranetra">
-                    <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_facebook_footer.png" alt="facebook mitra netra"/>
+                    Facebook
+                    <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_facebook_footer.png" alt="facebook mitra netra"/> -->
                 </a>
-            </div>
-            <div class="col-md-8 col-xs-12 footer-right">
-
+                |
+                <a href="https://twitter.com/mitra_netra">
+                    <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_twitter_footer.png" alt="twitter mitra netra"/> -->
+                    Twitter
+                </a>
+                |
+                <a href="http://mitranetra.or.id/">
+                    <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_mitranetra_footer.png" alt="Website mitra netra"/> -->
+                    Mitra Netra
+                </a>
+                |
+                <a href="http://seribubuku.kebi.or.id/">
+                    <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_mitranetra_footer.png" alt="Website mitra netra"/> -->
+                    Seribu Buku
+                </a>              
             </div>
         </div>
         <hr class="bates-footer">

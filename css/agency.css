@@ -2092,3 +2092,20 @@ textarea{
     border-radius:0px;
     border:none;
 }
+#stat-list{
+    padding-left:30%;
+    padding-top:10px;
+}
+#stat-list li{
+    float:left;
+    padding:0px 10px;
+    list-style: none;
+}
+.head-persyaratan{
+    font-size:32px;
+}
+.list-persyaratan{
+    font-size:18px;
+    font-family:'Hind',Helvetica,Arial,sans-serif;
+    padding-top:30px;
+}

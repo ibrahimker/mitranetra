@@ -35,7 +35,10 @@ get_header(); ?>
                                 </div>
                             </fieldset>
                         </form>
-                        <h6><?php echo wp_count_posts('sdm_downloads')->publish; ?> KOLEKSI | 3 PENERBIT | 17 PENGARANG | 2 UNDUH </h6>
+                        <ul id="stat-list">
+                            <li><?php echo wp_count_posts('sdm_downloads')->publish; ?> Total Koleksi</li>
+                            <li>2 Kali diunduh</li>
+                        </ul>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -60,36 +63,48 @@ get_header(); ?>
             <footer>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 col-xs-12 icon">
+                        <div class="col-md-12 col-xs-12 icon">
                             <a href="https://www.facebook.com/yayasanmitranetra">
-                                <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_facebook_footer.png" alt="facebook mitra netra"/>
+                                Facebook
+                                <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_facebook_footer.png" alt="facebook mitra netra"/> -->
                             </a>
+                            |
+                            <a href="https://twitter.com/mitra_netra">
+                                <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_twitter_footer.png" alt="twitter mitra netra"/> -->
+                                Twitter
+                            </a>
+                            |
+                            <a href="http://mitranetra.or.id/">
+                                <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_mitranetra_footer.png" alt="Website mitra netra"/> -->
+                                Mitra Netra
+                            </a>
+                            |
+                            <a href="http://seribubuku.kebi.or.id/">
+                                <!-- <img src="<?php echo bloginfo('template_directory'); ?>/img/icons/icon_mitranetra_footer.png" alt="Website mitra netra"/> -->
+                                Seribu Buku
+                            </a>              
                         </div>
-                        <div class="col-md-8 col-xs-12 footer-right">
-                <!--<a href="<?php echo get_site_url() ?>/index.php/contact/other-question" class="btn btn-footer-others">Ask Anything</a>
-                <a href="<?php echo get_site_url() ?>/index.php/contact/quotation" class="btn btn-footer-quotation">Request a Quotation</a> -->
-            </div>
-        </div>
-        <hr class="bates-footer">
-        <div class="row">
-            <div class="col-md-12">
-             <p class="copywright">Copyright &copy2016 Mitra Netra Inc. All rights reserved.</p>
-             <p>&nbsp;</p>
-         </div>
-     </div>
- </div>
-</footer>
-</div>
-</div>
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="<?php echo bloginfo('template_directory'); ?>/js/classie.js"></script>
-<script src="<?php echo bloginfo('template_directory'); ?>/js/cbpAnimatedHeader.js"></script>
+                    </div>
+                    <hr class="bates-footer">
+                    <div class="row">
+                        <div class="col-md-12">
+                           <p class="copywright">Copyright &copy2016 Mitra Netra Inc. All rights reserved.</p>
+                           <p>&nbsp;</p>
+                       </div>
+                   </div>
+               </div>
+           </footer>
+       </div>
+   </div>
+   <!-- Plugin JavaScript -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="<?php echo bloginfo('template_directory'); ?>/js/classie.js"></script>
+   <script src="<?php echo bloginfo('template_directory'); ?>/js/cbpAnimatedHeader.js"></script>
 
-<!-- Contact Form JavaScript -->
-<script src="<?php echo bloginfo('template_directory'); ?>/js/jqBootstrapValidation.js"></script>
-<script src="<?php echo bloginfo('template_directory'); ?>/js/contact_me.js"></script>
-<?php wp_footer(); ?>
+   <!-- Contact Form JavaScript -->
+   <script src="<?php echo bloginfo('template_directory'); ?>/js/jqBootstrapValidation.js"></script>
+   <script src="<?php echo bloginfo('template_directory'); ?>/js/contact_me.js"></script>
+   <?php wp_footer(); ?>
 
 </body>
 </html>

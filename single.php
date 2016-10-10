@@ -89,7 +89,7 @@ get_header(); ?>
 									$item_penerbit = get_post_meta($id, 'sdm_item_penerbit', true);
 									$isset_item_penerbit = isset($item_penerbit) ? $item_penerbit : '';
 
-									$content.= '<p><strong>Judul: </strong>'.$isset_item_title.'</p>';
+									$content.= '';
 									if (!empty($isset_item_pengarang)) {//Show file size info
 										$content .= '<p><strong>Pengarang: </strong>' . $isset_item_pengarang . '</p>';
 									}

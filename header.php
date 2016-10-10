@@ -12,6 +12,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Developed By Ibrahim Nurandita Isbandiputra | https://linkedin.com/in/ibrahimisbandiputra-->
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Pustaka Digital Mitra Netra">
@@ -71,7 +72,7 @@
              <span class="icon-bar"></span>
            </button>
            <a class="navbar-brand page-scroll" href="<?php echo get_site_url() ?>">
-            <img class="hvr-grow" style="max-width:150px;height:60px;" src="<?php echo bloginfo('template_directory'); ?>/img/logo-teks.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
+            <img class="hvr-grow" style="max-width:200px;margin:-40px;" src="<?php echo bloginfo('template_directory'); ?>/img/logo-teks.png" alt="Mitra Netra, Meningkatkan Kualitas dan Partisipasi Tunanetra">
           </a>
         </div>
 

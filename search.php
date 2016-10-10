@@ -35,8 +35,25 @@ get_header();
                         </div>
                     </fieldset>
                 </form>
+                <a href="#results" class="sr-only">Go To Results</a>
+                <?php $terms = get_terms( 'sdm_categories', array(
+                'orderby'    => 'count',
+                'hide_empty' => 0
+                ) ); ?>
                 <br>
+                <?php
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                   echo '<div>';
+                   foreach ( $terms as $term ) {
+                     echo '<a><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
+                     echo '  ';
+
+                 }
+                 echo '</div> ';
+             }
+             ?>
             </div>
+            <div id="#results"></div>
             <?php if (have_posts()) : ?>
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

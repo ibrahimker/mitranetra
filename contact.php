@@ -24,7 +24,7 @@ get_header();
 					Fax: (021) 7655264
 				</p>
 				<h2>Email:</h2>
-				<p>pustakamitranetra@gmail.com , info@mitranetra.or.id
+				<p>pustakamitranetra@gmail.com
 				</p>
 				<h2>Website:</h2>
 				<p>www.mitranetra.or.id
@@ -35,14 +35,6 @@ get_header();
 				</p>
 				<p>BANK NIAGA THAMRIN,
 					No.Rek. 008-01-33337-00-9
-				</p>
-				<h2>Teledonasi:</h2>
-				<p>BANK MANDIRI, Cabang Bona Indah, Jakarta
-					No.Rek. 101.000.215.7913
-				</p>
-
-				<p>BANK BCA KCP Bona Indah, Jakarta
-					No.Rek. 6080342444
 				</p>
 			</div>
 			<div class="col-md-1"></div>
