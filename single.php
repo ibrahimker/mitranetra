@@ -102,7 +102,6 @@ get_header(); ?>
 									if (!empty($isset_item_file_size)) {//Show file size info
 										$content .= '<p><strong>Ukuran File: </strong>' . $isset_item_file_size . '</p>';
 									}
-
 									$db_count = sdm_get_download_count_for_post($id);
 									$content .= '<p><strong>Total Diunduh: </strong>' . $db_count . ' kali</p>';
 
@@ -119,6 +118,7 @@ get_header(); ?>
 								echo $isset_item_description;
 								?>
 							</p>
+							<?php echo do_shortcode('[mashshare]'); ?>
 						</div>			
 					</div>
 				</div>

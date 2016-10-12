@@ -34,7 +34,7 @@ get_header();
                 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
                    echo '<div>';
                    foreach ( $terms as $term ) {
-                     echo '<a><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
+                     echo '<a href="'.get_site_url().'?s='.$term->name.'&post_type=sdm_downloads"><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
                      echo '  ';
 
                  }

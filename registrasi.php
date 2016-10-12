@@ -4,11 +4,12 @@ get_header();
 ?>
 <!-- About Section -->
 <section id="register">
-    <div class="container">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-10">
-        <div class="row">
+	<div class="container">
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<a href="#form-register" class="sr-only">Skip to Registration Form</a>
 				<center><h1 class="head-persyaratan" style="padding:0px;">PERSYARATAN MENJADI ANGGOTA
 					PUSTAKA MITRA NETRA ONLINE
 				</h1></center>
@@ -33,10 +34,12 @@ get_header();
 					<li>Tidak menyalahgunakan dan memindahtangankan buku yang diambil dari Pustaka Mitra Netra kepada pihak lain meskipun sesama penyandang tunanetra, karena setiap penyandang tunanetra yang ingin memanfaatkan buku dari Pustaka Mitra Netra wajib mendaftarkan diri menjadi anggota.</li>
 				</ol>
 			</div>
-            <?php echo do_shortcode('[gravityform id="3" title="false" description="false" ajax="true"]'); ?>
-        </div>
-        <div class="col-md-1">
-        </div>  
-    </div>
+			<div id="form-register">
+				<?php echo do_shortcode('[gravityform id="3" title="false" description="false" ajax="true"]'); ?>
+			</div>
+		</div>
+		<div class="col-md-1">
+		</div>  
+	</div>
 </section>
 <?php get_footer(); ?>

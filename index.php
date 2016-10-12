@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Badr Interactive
+ * @package Mitra Netra
  */
 get_header(); ?>
 
@@ -37,7 +37,7 @@ get_header(); ?>
                         </form>
                         <ul id="stat-list">
                             <li><?php echo wp_count_posts('sdm_downloads')->publish; ?> Total Koleksi</li>
-                            <li>2 Kali diunduh</li>
+                            <li><?php echo getTotalDownload(); ?> Kali diunduh</li>
                         </ul>
                     </div>
                     <div class="col-md-1"></div>
@@ -50,7 +50,7 @@ get_header(); ?>
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
                         <center><h1 style="padding: 50px 0px 30px 0px;font-size: 2em;text-transform: none;font-weight:400;">Membaca Buku, Membaca Dunia</h1></center>
-                        <p style="font-size:16px;font-family: 'Hind', sans-serif;">Pustaka digital mitra netra adalah sebuah perpustakaan yang menyediakan berbagai koleksi buku audio untuk dinikmati tuna netra. Kami percaya kalau buku adalah jendela dunia, oleh karena itu kami menyediakan sarana mendapatkan buku audio yang nyaman digunakan.</p>
+                        <p style="font-size:16px;font-family: 'Hind', sans-serif;">Pustaka digital mitra netra adalah sebuah perpustakaan yang menyediakan berbagai koleksi buku digital untuk dinikmati tuna netra. Penyelenggaran perpustakaan ini tidak melanggar hak cipta dengan mengacu pada UU Republik Indonesia No. 28 Tahun 2014 Tentang Hak Cipta Pasal 44 ayat 2: <b>"Fasilitasi akses atas suatu Ciptaan untuk penyandang tuna netra, penyandang kerusakan penglihatan atau keterbatasan dalam membaca, dan/atau pengguna huruf braille, buku audio, atau sarana lainnya, tidak dianggap sebagai pelanggaran Hak Cipta jika sumbernya disebutkan atau dicantumkan secara lengkap, kecuali bersifat komersial."</b></p>
                         <div class="row" style="padding:30px;">
                             <center><a href="<?php echo get_site_url() ?>/pustaka-digital" class="btn btn-badr">Mulai Membaca</a></center>
                         </div>
