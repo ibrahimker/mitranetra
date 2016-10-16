@@ -63,7 +63,7 @@ get_header(); ?>
 									$download_url = $homepage . '/?smd_process_download=1&download_id=' . $id;
 									if(is_user_logged_in()){
 										if(isEligibleToDownload()==1){
-										$download_button_code = '<a href="' . $download_url . '" class="btn btn-book-download" title="'.$isset_item_title.'">Download Now</a>';
+											$download_button_code = '<a href="' . $download_url . '" class="btn btn-book-download" title="'.$isset_item_title.'">Download Now</a>';
 										}
 										else{
 											$download_button_code = '<div class="alert alert-danger">Maaf, anda hanya dapat mengunduh tiga buku dalam satu hari</div>';
