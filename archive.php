@@ -19,22 +19,40 @@ get_header();
             </div>
             <div class="row">
               <form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline">
-                    <fieldset>
-                        <legend class="sr-only">Search Box Pencarian Buku:</legend>
-                        <div class="input-group" style="display:flex;">
-                            <label class="sr-only" for="search">Search Box Pencarian Buku</label>
-                            <input type="text" name="s" id="search" placeholder="Aku ingin membaca" value="<?php the_search_query(); ?>" class="form-control" style="height:50px;"/>
-                            <input type="hidden" name="post_type" value="sdm_downloads"  />
-                            <label class="sr-only" for="searchsubmit">Search</label>
-                            <button type="submit" class="btn btn-primary btn-search" id="searchcubmit">
-                                <span class='glyphicon glyphicon-search'></span>
-                            </button>
-                        </div>
-                    </fieldset>
-                </form>
-            <br>
-        </div>
-        <?php if (have_posts()) : ?>
+                <fieldset>
+                    <legend class="sr-only">Search Box Pencarian Buku:</legend>
+                    <div class="input-group" style="display:flex;">
+                        <label class="sr-only" for="search">Search Box Pencarian Buku</label>
+                        <input type="text" name="s" id="search" placeholder="Aku ingin membaca" value="<?php the_search_query(); ?>" class="form-control" style="height:50px;"/>
+                        <input type="hidden" name="post_type" value="sdm_downloads"  />
+                        <label class="sr-only" for="searchsubmit">Search</label>
+                        <button type="submit" class="btn btn-primary btn-search" id="searchcubmit">
+                            <span class='glyphicon glyphicon-search'></span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+            <a href="#results" class="sr-only">Go To Results</a>
+            <?php $terms = get_terms( 'sdm_categories', array(
+                'orderby'    => 'count',
+                'hide_empty' => 0
+                ) ); ?>
+                <br>
+                <?php
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                   echo '<div>';
+                   foreach ( $terms as $term ) {
+                     echo '<a href="'.get_site_url().'/sdm_categories/'.$term->name.'"><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
+                     echo '  ';
+
+                 }
+                 echo '</div> ';
+             }
+             ?>
+         </div>
+         </br>
+         <div id="#results"></div>
+         <?php if (have_posts()) : ?>
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             ?>
