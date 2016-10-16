@@ -9,11 +9,11 @@ get_header();
 		</div>
 		<div class="col-md-10">
 			<?php
-			if ( is_user_logged_in() ) {
+			// if ( is_user_logged_in() ) {
 				echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');
-			} else {
-				echo '<p style="padding:200px 50px;color:#000;font-size:2.168em;text-align:center;">Anda harus login terlebih dahulu untuk dapat mengakses halaman ini</p>';
-			}
+			// } else {
+			// 	echo '<p style="padding:200px 50px;color:#000;font-size:2.168em;text-align:center;">Anda harus login terlebih dahulu untuk dapat mengakses halaman ini</p>';
+			// }
 			?>
 
 		</div>

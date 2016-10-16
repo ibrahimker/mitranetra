@@ -38,6 +38,7 @@ get_header(); ?>
                         <ul id="stat-list">
                             <li><?php echo wp_count_posts('sdm_downloads')->publish; ?> Total Koleksi</li>
                             <li><?php echo getTotalDownload(); ?> Kali diunduh</li>
+                            <li><?php echo get_option('wphcu_data'); ?> Pengunjung</li>
                         </ul>
                     </div>
                     <div class="col-md-1"></div>
