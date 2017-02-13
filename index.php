@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * @author Ibrahim Nurandita Isbandiputra
  * @package Mitra Netra
  */
 get_header(); ?>
@@ -35,10 +35,11 @@ get_header(); ?>
                                 </div>
                             </fieldset>
                         </form>
-                        <ul id="stat-list">
+                        <ul id="stat-list" style="padding-left:20%;">
                             <li><?php echo wp_count_posts('sdm_downloads')->publish; ?> Total Koleksi</li>
                             <li><?php echo getTotalDownload(); ?> Kali diunduh</li>
                             <li><?php echo get_option('wphcu_data'); ?> Pengunjung</li>
+                            <li><?php $result=count_users();echo $result['total_users'] ?> Pengguna</li>
                         </ul>
                     </div>
                     <div class="col-md-1"></div>
@@ -89,23 +90,23 @@ get_header(); ?>
                     <hr class="bates-footer">
                     <div class="row">
                         <div class="col-md-12">
-                           <p class="copywright">Copyright &copy2016 Mitra Netra Inc. All rights reserved.</p>
-                           <p>&nbsp;</p>
-                       </div>
-                   </div>
-               </div>
-           </footer>
-       </div>
-   </div>
-   <!-- Plugin JavaScript -->
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-   <script src="<?php echo bloginfo('template_directory'); ?>/js/classie.js"></script>
-   <script src="<?php echo bloginfo('template_directory'); ?>/js/cbpAnimatedHeader.js"></script>
+                         <p class="copywright">Copyright &copy2016 Mitra Netra Inc. All rights reserved.</p>
+                         <p>&nbsp;</p>
+                     </div>
+                 </div>
+             </div>
+         </footer>
+     </div>
+ </div>
+ <!-- Plugin JavaScript -->
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+ <script src="<?php echo bloginfo('template_directory'); ?>/js/classie.js"></script>
+ <script src="<?php echo bloginfo('template_directory'); ?>/js/cbpAnimatedHeader.js"></script>
 
-   <!-- Contact Form JavaScript -->
-   <script src="<?php echo bloginfo('template_directory'); ?>/js/jqBootstrapValidation.js"></script>
-   <script src="<?php echo bloginfo('template_directory'); ?>/js/contact_me.js"></script>
-   <?php wp_footer(); ?>
+ <!-- Contact Form JavaScript -->
+ <script src="<?php echo bloginfo('template_directory'); ?>/js/jqBootstrapValidation.js"></script>
+ <script src="<?php echo bloginfo('template_directory'); ?>/js/contact_me.js"></script>
+ <?php wp_footer(); ?>
 
 </body>
 </html>

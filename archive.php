@@ -3,7 +3,7 @@
  * The template for displaying archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * @author Ibrahim Nurandita Isbandiputra
  * @package Mitra Netra
  */
 get_header();

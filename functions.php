@@ -1,10 +1,10 @@
 <?php
 /**
- * Badr Interactive functions and definitions.
+ * Mitra Netra functions and definitions.
  *
  * @link https://codex.wordpress.org/Functions_File_Explained
- *
- * @package Badr Interactive
+ * @author Ibrahim Nurandita Isbandiputra
+ * @package Mitra Netra
  */
 
 if ( ! function_exists( 'badr_setup' ) ) :
@@ -176,80 +176,88 @@ add_filter( 'projects_custom_fields', 'new_projects_fields' );
 function addUploadMimes($mimes) {
 
 	$mimes = array_merge($mimes, array(
-	'epub|mobi' => 'application/octet-stream'
-	));
+		'epub|mobi' => 'application/octet-stream'
+		));
 	return $mimes;
 
 }
 
 add_filter('upload_mimes', 'addUploadMimes');
 
+function get_currentuser_age(){
+	global $current_user;
+	$metadata = get_metadata('user',$current_user->ID);
+	global $age;
+	$age = date_diff(date_create($metadata['tanggal_lahir'][0]), date_create('today'))->y;
+	return $age;
+}
+add_action( 'get_currentuser_age', 'get_currentuser_age' );
 add_action( 'show_user_profile', 'add_other_user_info' );
 add_action( 'edit_user_profile', 'add_other_user_info' );
 
 function add_other_user_info( $user )
 {
-    ?>
-        <h3>Informasi Lainnya</h3>
+	?>
+	<h3>Informasi Lainnya</h3>
 
-        <table class="form-table">
-            <tr>
-                <th><label for="nomor_handphone">Nomor Handphone</label></th>
-                <td><input type="text" name="nomor_handphone" value="<?php echo esc_attr(get_the_author_meta( 'nomor_handphone', $user->ID )); ?>" class="regular-text" /></td>
-            </tr>
+	<table class="form-table">
+		<tr>
+			<th><label for="nomor_handphone">Nomor Handphone</label></th>
+			<td><input type="text" name="nomor_handphone" value="<?php echo esc_attr(get_the_author_meta( 'nomor_handphone', $user->ID )); ?>" class="regular-text" /></td>
+		</tr>
 
-            <tr>
-                <th><label for="jenis">Jenis Tuna Netra</label></th>
-                <td><input type="text" name="jenis" value="<?php echo esc_attr(get_the_author_meta( 'jenis', $user->ID )); ?>" class="regular-text" /></td>
-            </tr>
+		<tr>
+			<th><label for="jenis">Jenis Tuna Netra</label></th>
+			<td><input type="text" name="jenis" value="<?php echo esc_attr(get_the_author_meta( 'jenis', $user->ID )); ?>" class="regular-text" /></td>
+		</tr>
 
-            <tr>
-                <th><label for="jenis_kelamin">Jenis Kelamin</label></th>
-                <td><input type="text" name="jenis_kelamin" value="<?php echo esc_attr(get_the_author_meta( 'jenis_kelamin', $user->ID )); ?>" class="regular-text" /></td>
-            </tr>
+		<tr>
+			<th><label for="jenis_kelamin">Jenis Kelamin</label></th>
+			<td><input type="text" name="jenis_kelamin" value="<?php echo esc_attr(get_the_author_meta( 'jenis_kelamin', $user->ID )); ?>" class="regular-text" /></td>
+		</tr>
 
-            <tr>
-                <th><label for="tanggal_lahir">Tanggal Lahir</label></th>
-                <td><input type="text" name="tanggal_lahir" value="<?php echo esc_attr(get_the_author_meta( 'tanggal_lahir', $user->ID )); ?>" class="regular-text" /></td>
-            </tr>
+		<tr>
+			<th><label for="tanggal_lahir">Tanggal Lahir</label></th>
+			<td><input type="text" name="tanggal_lahir" value="<?php echo esc_attr(get_the_author_meta( 'tanggal_lahir', $user->ID )); ?>" class="regular-text" /></td>
+		</tr>
 
-            <tr>
-                <th><label for="alamat">Alamat</label></th>
-                <td><input type="text" name="alamat" value="<?php echo esc_attr(get_the_author_meta( 'alamat', $user->ID )); ?>" class="regular-text" /></td>
-            </tr>
-        </table>
-        </br>
-        <h3>User Download Activity</h3>
-        <?php
-		    function build_table($array){
+		<tr>
+			<th><label for="alamat">Alamat</label></th>
+			<td><input type="text" name="alamat" value="<?php echo esc_attr(get_the_author_meta( 'alamat', $user->ID )); ?>" class="regular-text" /></td>
+		</tr>
+	</table>
+</br>
+<h3>User Download Activity</h3>
+<?php
+function build_table($array){
 			    // start table
-			    $html = '<table class="wp-list-table widefat fixed striped downloads">';
+	$html = '<table class="wp-list-table widefat fixed striped downloads">';
 			    // header row
-			    $html .= '<tr>';
-			    foreach($array[0] as $key=>$value){
-			            $html .= '<th>' . $key . '</th>';
-			        }
-			    $html .= '</tr>';
+	$html .= '<tr>';
+	foreach($array[0] as $key=>$value){
+		$html .= '<th>' . $key . '</th>';
+	}
+	$html .= '</tr>';
 
 			    // data rows
-			    foreach( $array as $key=>$value){
-			        $html .= '<tr>';
-			        foreach($value as $key2=>$value2){
-			            $html .= '<td>' . $value2 . '</td>';
-			        }
-			        $html .= '</tr>';
-			    }
+	foreach( $array as $key=>$value){
+		$html .= '<tr>';
+		foreach($value as $key2=>$value2){
+			$html .= '<td>' . $value2 . '</td>';
+		}
+		$html .= '</tr>';
+	}
 
 			    // finish table and return it
 
-			    $html .= '</table>';
-			    return $html;
-			}
-        	$data_results=getUserActivity();
-        	echo build_table($data_results);
-        ?>
+	$html .= '</table>';
+	return $html;
+}
+$data_results=getUserActivity();
+echo build_table($data_results);
+?>
 
-    <?php
+<?php
 }
 
 add_action( 'personal_options_update', 'save_user_info' );
@@ -257,20 +265,20 @@ add_action( 'edit_user_profile_update', 'save_user_info' );
 
 function save_user_info( $user_id )
 {
-    update_user_meta( $user_id,'nomor_handphone', sanitize_text_field( $_POST['nomor_handphone'] ) );
-    update_user_meta( $user_id,'jenis', sanitize_text_field( $_POST['jenis'] ) );
-    update_user_meta( $user_id,'jenis_kelamin', sanitize_text_field( $_POST['jenis_kelamin'] ) );
-    update_user_meta( $user_id,'alamat', sanitize_text_field( $_POST['alamat'] ) );
-    update_user_meta( $user_id,'tanggal_lahir', sanitize_text_field( $_POST['tanggal_lahir'] ) );
+	update_user_meta( $user_id,'nomor_handphone', sanitize_text_field( $_POST['nomor_handphone'] ) );
+	update_user_meta( $user_id,'jenis', sanitize_text_field( $_POST['jenis'] ) );
+	update_user_meta( $user_id,'jenis_kelamin', sanitize_text_field( $_POST['jenis_kelamin'] ) );
+	update_user_meta( $user_id,'alamat', sanitize_text_field( $_POST['alamat'] ) );
+	update_user_meta( $user_id,'tanggal_lahir', sanitize_text_field( $_POST['tanggal_lahir'] ) );
 }
 
 function my_login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png);
-            height:60px;
-        }
-    </style>
+<style type="text/css">
+	#login h1 a, .login h1 a {
+		background-image: url(<?php echo bloginfo('template_directory'); ?>/img/header/logo-mitranetra.png);
+		height:60px;
+	}
+</style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
@@ -279,24 +287,24 @@ function wpse127636_register_url($link){
     /*
         Change wp registration url
     */
-    return str_replace(site_url('wp-login.php?action=register', 'login'),site_url('register', 'login'),$link);
-}
-add_filter('register','wpse127636_register_url');
+        return str_replace(site_url('wp-login.php?action=register', 'login'),site_url('register', 'login'),$link);
+    }
+    add_filter('register','wpse127636_register_url');
 
-function wpse127636_fix_register_urls($url, $path, $orig_scheme){
+    function wpse127636_fix_register_urls($url, $path, $orig_scheme){
     /*
         Site URL hack to overwrite register url     
         http://en.bainternet.info/2012/wordpress-easy-login-url-with-no-htaccess
     */
-    if ($orig_scheme !== 'login')
+        if ($orig_scheme !== 'login')
+        	return $url;
+
+        if ($path == 'wp-login.php?action=register')
+        	return site_url('register', 'login');
+
         return $url;
-
-    if ($path == 'wp-login.php?action=register')
-        return site_url('register', 'login');
-
-    return $url;
-}
-add_filter('site_url', 'wpse127636_fix_register_urls', 10, 3);
+    }
+    add_filter('site_url', 'wpse127636_fix_register_urls', 10, 3);
 
 /**
  * Implement the Custom Header feature.

@@ -12,11 +12,11 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<!-- Developed By Ibrahim Nurandita Isbandiputra | https://linkedin.com/in/ibrahimisbandiputra-->
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Pustaka Digital Mitra Netra">
-	<meta name="author" content="Mitra Netra">
+  <!-- Developed By Ibrahim Nurandita Isbandiputra | https://linkedin.com/in/ibrahimisbandiputra-->
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pustaka Digital Mitra Netra">
+  <meta name="author" content="Mitra Netra">
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
   <!-- Bootstrap Core CSS -->
   <link href="<?php echo bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
