@@ -282,6 +282,35 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
+/**
+ * Add a widget to the dashboard.
+ *
+ * This function is hooked into the 'wp_dashboard_setup' action below.
+ */
+function example_add_dashboard_widgets() {
+
+	wp_add_dashboard_widget(
+                 'statistik',         // Widget slug.
+                 'Statistik',         // Title.
+                 'showDashboardStatistic' // Display function.
+        );	
+}
+add_action( 'wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+/**
+ * Create the function to output the contents of our Dashboard Widget.
+ */
+function showDashboardStatistic() {
+
+	// Display whatever it is you want to show.
+	?>
+	<a href="https://mitranetra.web.id/wp-admin/admin.php?page=gf_export&view=export_form">Link untuk export Form Isian</a>
+	<br>
+	<a href="https://mitranetra.web.id/wp-admin/edit.php?post_type=sdm_downloads">Link untuk lihat daftar buku</a>
+	<br>
+	<a href="https://mitranetra.web.id/wp-admin/users.php">Link untuk lihat daftar pengguna (Silahkan klik salah satu pengguna untuk melihat detil aktivitas download nya)</a>
+	<?php
+}
 
 function wpse127636_register_url($link){
     /*

@@ -417,6 +417,7 @@ header .intro-lead-in {
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 25px;
     font-weight: 500;
+    text-transform:none !important;
 }
 
 header .intro-heading {
@@ -424,6 +425,7 @@ header .intro-heading {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align:center;
     font-size: 22px;
+    display:none !important;
 }
 
 header .intro-image{
@@ -450,6 +452,8 @@ header .intro-image{
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 18px;
         font-weight:300;
+        display:block !important;
+
     }
     header .intro-works, header .intro-works:hover{
         margin-top:10px;
@@ -480,7 +484,12 @@ header .intro-image{
     background-position: center bottom;
     background-size:cover;
     /*background-repeat: repeat;*/
-    min-height: 480px;
+    min-height: 380px !important;
+}
+@media(min-width: 768px){
+    .home-header header{
+        min-height: 480px !important;
+    }
 }
 #home2 {
     text-align: center;
@@ -1248,11 +1257,11 @@ section#about{
     color:#BBBBBB;
 }
 ::-webkit-input-placeholder { /* Chrome, Safari */
-   color: #BBBBBB;
+ color: #BBBBBB;
 }
 
 :-moz-placeholder {           /* Firefox 18- */
-   color: #BBBBBB;
+ color: #BBBBBB;
 }
 
 ::-moz-placeholder {          /* Firefox 19+ */
@@ -2093,8 +2102,13 @@ textarea{
     border:none;
 }
 #stat-list{
-    padding-left:30%;
+    padding-left:10%;
     padding-top:10px;
+}
+@media(min-width: 768px){
+ #stat-list{
+    padding-left:20%;
+} 
 }
 #stat-list li{
     float:left;
@@ -2108,4 +2122,7 @@ textarea{
     font-size:18px;
     font-family:'Hind',Helvetica,Arial,sans-serif;
     padding-top:30px;
+}
+.wow {
+   visibility: hidden;
 }

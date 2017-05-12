@@ -12,7 +12,7 @@ get_header();
                 <h1 class="head-blog">Pustaka Digital</h1>
             </div>
             <div class="row">
-              <form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline">
+              <form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline" role="search">
                 <fieldset>
                     <legend class="sr-only">Search Box Pencarian Buku:</legend>
                     <div class="input-group" style="display:flex;">
@@ -24,7 +24,7 @@ get_header();
                     </div>
                 </fieldset>
             </form>
-            <a href="#results" class="sr-only">Go To Results</a>
+            <a href="#results" class="sr-only">Skip Category Navigation</a>
             <?php $terms = get_terms( 'sdm_categories', array(
                 'orderby'    => 'count',
                 'hide_empty' => 0
@@ -32,18 +32,18 @@ get_header();
                 <br>
                 <?php
                 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-                   echo '<div>';
-                   foreach ( $terms as $term ) {
-                     echo '<a href="'.get_site_url().'/sdm_categories/'.$term->name.'"><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
-                     echo '  ';
+                 echo '<div>';
+                 foreach ( $terms as $term ) {
+                   echo '<a href="'.get_site_url().'/sdm_categories/'.$term->name.'"><span class="badge">' . $term->name.' '.$term->count. '</span></a>';
+                   echo '  ';
 
-                 }
-                 echo '</div> ';
-             }
-             ?>
-         </div>
-         <div id="#results"></div>
-         <?php if (have_posts()) : ?>
+               }
+               echo '</div> ';
+           }
+           ?>
+       </div>
+       <div id="results" role="main">
+           <?php if (have_posts()) : ?>
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $age=get_currentuser_age();
@@ -137,7 +137,7 @@ get_header();
             <?php endwhile; ?>
             <br>
             <br>
-            <div class="row">
+            <div class="row" role="navigation" aria-labelledby="results pagination">
                 <div class="col-md-3">
                     <?php previous_posts_link(); ?>
                 </div>
@@ -151,8 +151,9 @@ get_header();
             <h4>Nothing Found</h4>
         <?php endif; ?>
     </div>
-    <div class="col-md-1">
-    </div>  
+</div>
+<div class="col-md-1">
+</div>  
 </div>
 </section>
 <?php get_footer(); ?>

@@ -12,7 +12,7 @@
 ?>
 
 <footer>
-    <div class="container">
+    <div class="container" role="contentinfo">
         <div class="row" style="padding-bottom:10px;">
             <div class="col-md-12 col-xs-12 icon">
                 <a href="https://www.facebook.com/yayasanmitranetra">

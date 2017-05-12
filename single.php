@@ -39,13 +39,10 @@ get_header(); ?>
 						<div class="col-md-4">
 							<p class="blog-posts-date"><?php the_date('j F Y'); ?></p>
 						</div>
-						<div class="col-md-8">
-							<div class="tags-title">Kategori: <?php the_terms( $post->ID, 'sdm_categories', '', ", ", '' ); ?></div>
-						</div>
 					</div>
 				</br>
 				<div class="row">
-					<div class="blog-content">
+					<div class="blog-content" role="main">
 						<div class="col-md-4">
 							<div class="row">
 								<?php
@@ -133,7 +130,7 @@ get_header(); ?>
 				</div>
 				<hr class="bates">
 				<!-- next story -->
-				<div class="row">
+				<div class="row" role="navigation" aria-labelledby="Buku Sebelum dan Sesudah">
 					<div class="col-md-6">
 						<p class="post-pagination-prev">Previous Books</p>
 						<div class="post-prev-link"><?php echo get_previous_post_link('%link','%title'); ?></div>

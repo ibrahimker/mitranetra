@@ -8,8 +8,8 @@ get_header();
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-10">
-			<div class="row">
-				<center><h1 class="head-persyaratan" style="padding:0px;">PERSYARATAN MENJADI ANGGOTA
+			<div class="row" role="main">
+				<center><h1 class="head-persyaratan" style="padding:0px;" role="heading">PERSYARATAN MENJADI ANGGOTA
 					PUSTAKA MITRA NETRA ONLINE
 				</h1></center>
 				<ol class="list-persyaratan">
