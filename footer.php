@@ -10,7 +10,7 @@
  */
 
 ?>
-
+</div>
 <footer>
     <div class="container" role="contentinfo">
         <div class="row" style="padding-bottom:10px;">

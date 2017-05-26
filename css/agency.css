@@ -177,7 +177,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    padding: 25px 0;
+    padding: 15px 0;
     background-color: #fff;
     margin:0px;
     border-bottom:1px solid #dddddd
@@ -411,7 +411,7 @@ body {
 
 /*header section*/
 header .intro-lead-in {
-    padding-top:35%;
+    padding-top:15%;
     text-align:center;
     margin-bottom: 25px;
     font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -484,7 +484,7 @@ header .intro-image{
     background-position: center bottom;
     background-size:cover;
     /*background-repeat: repeat;*/
-    min-height: 380px !important;
+    min-height: 180px !important;
 }
 @media(min-width: 768px){
     .home-header header{
@@ -2102,8 +2102,9 @@ textarea{
     border:none;
 }
 #stat-list{
-    padding-left:10%;
+    padding-left:25%;
     padding-top:10px;
+    visibility:hidden;
 }
 @media(min-width: 768px){
  #stat-list{

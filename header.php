@@ -68,7 +68,7 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <!-- Navigation -->
-        
+        <a href="#main-content" class="sr-only">Skip Navigation</a>
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
            <!-- Brand and toggle get grouped for better mobile display -->
@@ -115,3 +115,4 @@
     </div>
     <!-- /.container-fluid -->
   </nav>>
+  <div id="main-content">

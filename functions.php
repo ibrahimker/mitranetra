@@ -335,6 +335,15 @@ function wpse127636_register_url($link){
     }
     add_filter('site_url', 'wpse127636_fix_register_urls', 10, 3);
 
+function register_buku_mitnet() {
+    global $wp_post_types;
+ 
+    $wp_post_types['sdm_downloads']->show_in_rest = true;
+    $wp_post_types['sdm_downloads']->rest_base = 'sdm_downloads';
+    $wp_post_types['sdm_downloads']->rest_controller_class = 'WP_REST_Posts_Controller';
+}
+add_action( 'init', 'register_buku_mitnet', 30 );
+
 /**
  * Implement the Custom Header feature.
  */
