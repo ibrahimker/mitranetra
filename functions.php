@@ -345,6 +345,14 @@ function register_buku_mitnet() {
 add_action( 'init', 'register_buku_mitnet', 30 );
 
 /**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function add_comment_for_sdm_downloads() {
+	add_post_type_support( 'sdm_downloads', array( 'comments' ) );
+}
+add_action( 'init', 'add_comment_for_sdm_downloads' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -384,3 +392,22 @@ require get_template_directory() . '/inc/breadcrumb.php';
  */
 require get_template_directory() . '/inc/gravityform.php';
 require get_template_directory() . '/inc/gravityform2.php';
+
+// The object type. For custom post types, this is 'post';
+// for custom comment types, this is 'comment'. For user meta,
+// this is 'user'.
+$object_type = 'post';
+$args1 = array( // Validate and sanitize the meta value.
+    // Note: currently (4.7) one of 'string', 'boolean', 'integer',
+    // 'number' must be used as 'type'. The default is 'string'.
+    'type'         => 'string',
+    // Shown in the schema for the meta key.
+    'description'  => 'A meta key associated with a string meta value.',
+    // Return a single value of the type.
+    'single'       => true,
+    // Show in the WP REST API response. Default: false.
+    'show_in_rest' => true,
+);
+register_meta( $object_type, 'my_meta_key', $args1 );
+
+add_filter('show_admin_bar', '__return_false');

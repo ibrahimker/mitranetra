@@ -1189,6 +1189,11 @@ section#about{
     padding-top:30px;
     padding-bottom: 30px;
 }
+@media(max-width:768px){
+    .head-blog{
+        padding-top:40%;
+    }
+}
 .post-thumbnail{
     padding:30px 0px 30px 0px;
     width:auto !important;
@@ -2104,7 +2109,6 @@ textarea{
 #stat-list{
     padding-left:25%;
     padding-top:10px;
-    visibility:hidden;
 }
 @media(min-width: 768px){
  #stat-list{
